@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/datalayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorDarkBlue"
+    tools:context="com.example.klient2.rsa.RSADATA">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Now you can check data in number P and number Q. Condition for good data is:\n\n - Number P must be Prime\n - Number Q must be Prime\n - Numbers must not be equal\n\n Button 'View' you use on your own response."
+        android:gravity="center"
+        android:textSize="30px"/>
+
+    <TextView
+        android:id="@+id/numberP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\nType Number P"
+        android:layout_below="@+id/Title"/>
+
+    <EditText
+        android:id="@+id/P"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@+id/numberP"/>
+
+    <TextView
+        android:id="@+id/numberQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\nType Number Q"
+        android:layout_below="@+id/P"/>
+
+    <EditText
+        android:id="@+id/Q"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@+id/numberQ"/>
+
+    <Button
+        android:id="@+id/buttonsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="button_submit"
+        android:layout_below="@+id/Q"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonsubmit"/>
+
+</RelativeLayout>
